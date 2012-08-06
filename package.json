@@ -1,0 +1,14 @@
+{
+  "name": "nodis",
+  "version": "0.0.1",
+  "private": true,
+  "author": "sumory.wu@gmail.com",
+  "dependencies": {
+    "ejs": "0.8.0",
+    "express": "3.0.0rc2",
+    "express-partials": "0.0.5",
+    "zookeeper": ">=3.4.1-4",
+    "redis": "0.7.2",
+    "thrift": "0.7.0"
+  }
+}

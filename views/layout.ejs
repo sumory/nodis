@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title><%=title%> by <%=author%></title>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap-responsive.css">
+    <style>
+        .well> span{
+            line-height:45px;
+        }
+        .well .btn{
+            margin-left:20px;
+        }
+    </style>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap-transition.js"></script>
+    <script src="/js/bootstrap-alert.js"></script>
+    <script src="/js/bootstrap-modal.js"></script>
+    <script src="/js/bootstrap-dropdown.js"></script>
+    <script src="/js/bootstrap-scrollspy.js"></script>
+    <script src="/js/bootstrap-tab.js"></script>
+    <script src="/js/bootstrap-tooltip.js"></script>
+    <script src="/js/bootstrap-popover.js"></script>
+    <script src="/js/bootstrap-button.js"></script>
+    <script src="/js/bootstrap-collapse.js"></script>
+    <script src="/js/bootstrap-carousel.js"></script>
+    <script src="/js/bootstrap-typeahead.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $("#queryInput").keyup(function(){
+        		var q = $('#queryInput').val();
+        		if(q && q.length > 0){
+            		$.ajax({
+						type: "get",
+						url: "/queryPrefixUserPage?q="+q,
+						success:function(result){
+						    if(result.flag){
+                                $('#dataCount').html('<span class="label label-info">总数: '+result.data.length+'</span>');
+						    	var data = result.data;
+						    	var html='<ul>';
+						    	for(var i in data){
+						    		html+='<li style="line-height:25px;">' + data[i]+'</li>';
+						    	}
+						    	html+='</ul>';
+						    	$('#data').html(html);
+                                                       
+						    }	
+						    else{
+						    	$('#data').html('');
+						    }
+						},
+					  	error:function(){}
+					});
+            	}
+                else{
+                    $('#data').html('');
+                    $('#dataCount').html('<span class="label label-info">总数： 0</span>');
+                }
+            });
+        });
+    </script>
+</head>
+<body style='width:700px;margin:0 auto;text-align:left;min-height:800px;'>
+    
+<%-body %>
+
+</body>
+</html>
