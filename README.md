@@ -1,19 +1,21 @@
 ## Nodis
 
-  Nodis - Prefix match search and Segment words search built on Node.js and Redis.
+**Nodis** - é€šç”¨æ–‡æœ¬å‰ç¼€åŒ¹é…æœç´¢å’Œæ¨¡ç³Šæœç´¢æœåŠ¡ç¨‹åºï¼ŒåŸºäºNode.jså’ŒRedis.
   
-  Ê¹ÓÃÁËzookeeperºÍthrift, ¿Í»§¶Ë¿ÉÓÃÈÎºÎÖ§³ÖthriftµÄÓïÑÔÊµÏÖ, Ò²¿ÉÒÔºÜÈİÒ×µÄÈ¥³ıÕâÁ½²¿·Ö.
+### ä½¿ç”¨
 
-  
-### Ê¹ÓÃ
+ - ä½¿ç”¨Zookeeperå’ŒThrift:
 
- - Æô¶¯redis
- - Æô¶¯·şÎñ¶Ënode NodisServer.js(»á×¢²ázookeeper·şÎñ)
- - ¸ù¾İthrift/nodis.thriftÌá¹©µÄ½Ó¿ÚÊµÏÖ¿Í»§¶Ë(»òÖ±½ÓÓÃ/thrift/gen-nodejsÀïÉú³ÉµÄ¿Í»§¶Ë´úÂë)
- - Í¨¹ızookeeperÄÃµ½·şÎñµØÖ·£¬²¢Í¨¹ıthrift¿Í»§¶Ëµ÷ÓÃ½Ó¿Ú²âÊÔ
+	```
+	 - å¯åŠ¨redis
+	 - å¯åŠ¨æœåŠ¡ç«¯node NodisServer.js(ä¼šæ³¨å†ŒzookeeperæœåŠ¡)
+	 - æ ¹æ®thrift/nodis.thriftæä¾›çš„æ¥å£å®ç°å®¢æˆ·ç«¯(æˆ–ç›´æ¥ç”¨/thrift/gen-nodejsé‡Œç”Ÿæˆçš„å®¢æˆ·ç«¯ä»£ç )
+	 - é€šè¿‡zookeeperæ‹¿åˆ°æœåŠ¡åœ°å€ï¼Œå¹¶é€šè¿‡thriftå®¢æˆ·ç«¯è°ƒç”¨æ¥å£æµ‹è¯•
+	```
+
+ - ç›´æ¥ä½¿ç”¨Nodis, ç¤ºä¾‹`Nodis.js`
+
  
-### ÆäËü
+### å…¶å®ƒ
 
- - zookeeperµÄ´úÂë¿ÉÒÔºÜÈİÒ×µÄÒÆ³ı, ´úÂëÔÚ/lib/zk.js
- - ºËĞÄ¿âÖ»ÓĞnodis.js, ²»Ê¹ÓÃthriftÖ»ĞèÒª¸ü¸Ä/NodisServer.js
- - Ç°×ºÆ¥ÅäËÑË÷(ÈçUser), Ìá¹©ÁËapp.jsÓÃ×÷²Î¿¼ÊµÏÖ
+ - å‰ç¼€åŒ¹é…æœç´¢(å¦‚User), æä¾›äº†app.jsç”¨ä½œwebç«¯å‚è€ƒå®ç°
